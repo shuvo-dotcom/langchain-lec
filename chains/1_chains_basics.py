@@ -18,7 +18,7 @@ prompt_template = ChatPromptTemplate.from_messages(
 )
 
 # Create the combined chain using LangChain Expression Language (LCEL)
-chain = prompt_template | model | StrOutputParser() # StrOutputParser() will extract the content and | is pipe operator
+chain = prompt_template | model | StrOutputParser() # StrOutputParser() will extract the content and | is pipe operator even if the task goes to 15 or any number it will be available for the rest
 # chain = prompt_template | model
 
 # Run the chain
